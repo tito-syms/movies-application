@@ -4,7 +4,18 @@ html, body {
 
 .container {
     position: relative;
-    top: 50%;
+    top: 85%;
+    height:auto;
     transform: translateY(-100%);
     text-align: center;
+}
+
+.movieBox {
+    overflow: scroll;
+    height: 150px;
+    width: 50%;
+    margin: 25px  auto;
+    border: 2px solid grey;
+    padding: 25px;
+
 }

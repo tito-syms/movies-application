@@ -16,16 +16,84 @@
             <h1>Loading...</h1>
         </div>
 
-        <h1>Movie Lister</h1>
-        <form>
-            <div class="form-group col-md-6">
-                <label class="col-form-label" for="formGroupExampleInput">Search Movies</label>
-                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="search your movies here">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1>Movie List</h1>
+            </div>
+        </div>
+        <br>
+        <!--<form class="row">-->
+            <!--<div class="form-group col-md-6">-->
+                <!--<div class="input-group">-->
+                <!--<input type="text" class="form-control" placeholder="Search for movies">-->
+                <!--<span class="input-group-btn">-->
+                    <!--<button class="btn btn-default" type="button">Search</button>-->
+                <!--</span>-->
+                <!--</div>&lt;!&ndash; /input-group &ndash;&gt;-->
+            <!--</div>-->
+            <div class="col-md-12">
+                <div id="movies" class="movieBox"></div>
+            </div>
+        <br>
+        </form>
+        <br>
+        <div class="row">
+            <div class="col-md-6">
+                <form method="post" id="addMovie">
+                    <div class="form-group">
+                        <label class="col-form-label" for="movieTitle">Add a movie</label>
+                        <input type="text" class="form-control" id="movieTitle" placeholder="Movie Title">
+                    </div>
+                    <div class="form-group">
+                        <label class="col-form-label">How would you rate this movie?</label>
+                        <div class="radio">
+                            <label><input type="radio" name="optradio" id="oneStar" value="1">1 star</label>
+                        </div>
+                        <div class="radio">
+                            <label><input type="radio" name="optradio" id="twoStar" value="2">2 star</label>
+                        </div>
+                        <div class="radio">
+                            <label><input type="radio" name="optradio" id="threeStar" value="3">3 star</label>
+                        </div>
+                        <div class="radio">
+                            <label><input type="radio" name="optradio" id="fourStar" value="4">4 star</label>
+                        </div>
+                        <div class="radio">
+                            <label><input type="radio" name="optradio" id="fiveStar" value="5">5 star</label>
+                        </div>
+                        <button type="submit" class="btn btn-default" id="newMovie">Submit</button>
+                    </div>
+                </form>
             </div>
             <div class="col-md-6">
-                <div id="movies"></div>
+                <form method="post" id="editMovie">
+                    <div class="form-group">
+                        <label class="col-form-label" for="editTitle">Edit a movie</label>
+                        <input type="text" class="form-control" id="editTitle" placeholder="Movie Title">
+                    </div>
+                    <div class="form-group">
+                        <label class="col-form-label">How would you rate this movie?</label>
+                        <div class="radio">
+                            <label><input type="radio" name="optradio" value="1">1 star</label>
+                        </div>
+                        <div class="radio">
+                            <label><input type="radio" name="optradio" value="2">2 star</label>
+                        </div>
+                        <div class="radio">
+                            <label><input type="radio" name="optradio" value="3">3 star</label>
+                        </div>
+                        <div class="radio">
+                            <label><input type="radio" name="optradio" value="4">4 star</label>
+                        </div>
+                        <div class="radio">
+                            <label><input type="radio" name="optradio" value="5">5 star</label>
+                        </div>
+                        <button type="button" class="btn btn-danger" id="deleteMovie">Delete</button>
+                        <button type="submit" class="btn btn-default" id="editMovieBtn">Save Changes</button>
+                    </div>
+                </form>
             </div>
-        </form>
+        </div>
 
     </div>
 
