@@ -61,3 +61,59 @@ $("#newMovie").click(function(e){
     });
 });
 
+
+//Save Changes
+$("#editMovie").click(function(e) {
+
+    e.preventDefault();
+    let title = $('#movieTitle').val();
+    let rating = $('input[name=optradio]:checked').val();
+    let formData = {title:title,rating:rating};
+    $('#editMovieBtn').fadeOut(800);
+    $.ajax({
+        url : "/api/movies",
+        type: "PUT",
+        data : formData,
+        success: function() {
+
+            $('#editMovieBtn').fadeIn(2000);
+
+            updateMovies();
+        },
+        error: function (jqXHR, textStatus, errorThrown)
+        {
+            alert('Something is wrong');
+        }
+    });
+
+
+});
+
+//Delete Movie
+$('#deleteMovie').click(function (e) {
+
+    e.preventDefault();
+    let title = $('#movieTitle').val();
+    let rating = $('input[name=optradio]:checked').val();
+    let formData = {title:title,rating:rating};
+    $('#deleteMovie').fadeOut(800);
+    $.ajax({
+        url : "/api/movies",
+        type: "DELETE",
+        data : formData,
+        success: function() {
+
+            $('#deleteMovie').fadeIn(2000);
+
+            updateMovies();
+            $('#movieTitle').val('');
+        },
+        error: function (jqXHR, textStatus, errorThrown)
+        {
+            alert('Something is wrong');
+        }
+    });
+
+
+
+});
