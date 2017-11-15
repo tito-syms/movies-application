@@ -1,68 +1,40 @@
-<<<<<<< HEAD
-// /**
-//  * es6 modules and imports
-//  */
-// import sayHello from './hello';
-// sayHello('World');
-
-=======
 /**
  * es6 modules and imports
  */
 // import sayHello from './hello';
 // sayHello('World');
->>>>>>> b52febb84a5c15e62940d0a32508a93dd8ab4725
 
 /**
  * require style imports
  */
-<<<<<<< HEAD
-const {getMovies} = require('./api.js');
-
-const movieDisplay = document.getElementById("movieDisplay");
-
-getMovies().then((movieData) => {
-
-  console.log('Here are all the movies:');
-  movieData.forEach(({title, rating, id}) => {
-    console.log(`id#${id} - ${title} - rating: ${rating}`);
-
-    movieDisplay.innerHTML = `id#${id} - ${title} - rating: ${rating}`;
-  });
-  console.log(movieData);
-
-}).catch((error) => {
-  alert('Oh no! Something went wrong.\nCheck the console for details.')
-  console.log(error);
-=======
 const $ = require("jquery");
 const {getMovies} = require('./api.js');
 
 //loading function
- function updateMovies() {
-     getMovies().then((movies) => {
-         const $loading = $('#loading').hide();
-         $(document)
-             .ajaxStart(function () {
-                 $loading.hide('body');
-             })
-             .ajaxStop(function () {
-                 $loading.show('body');
-             });
+function updateMovies() {
+    getMovies().then((movies) => {
+        const $loading = $('#loading').hide();
+        $(document)
+            .ajaxStart(function () {
+                $loading.hide('body');
+            })
+            .ajaxStop(function () {
+                $loading.show('body');
+            });
 
-         console.log('Here are all the movies:');
-         let movieTitles = "";
-         movies.forEach(({title, rating, id}) => {
-             movieTitles += `<div><p>${title} - rating: ${rating}</p></div>`;
-             $('#movies').html(movieTitles);
-             console.log(`id#${id} - ${title} - rating: ${rating}`);
-         });
-     }).catch((error) => {
-         alert('Oh no! Something went wrong.\nCheck the console for details.');
-         console.log(error);
-     });
- }
- updateMovies();
+        console.log('Here are all the movies:');
+        let movieTitles = "";
+        movies.forEach(({title, rating, id}) => {
+            movieTitles += `<div><p>${title} - rating: ${rating}</p></div>`;
+            $('#movies').html(movieTitles);
+            console.log(`id#${id} - ${title} - rating: ${rating}`);
+        });
+    }).catch((error) => {
+        alert('Oh no! Something went wrong.\nCheck the console for details.');
+        console.log(error);
+    });
+}
+updateMovies();
 //New movie submit
 $("#newMovie").click(function(e){
 
@@ -115,7 +87,6 @@ $("#editMovie").click(function(e) {
     });
 
 
->>>>>>> b52febb84a5c15e62940d0a32508a93dd8ab4725
 });
 
 //Delete Movie
