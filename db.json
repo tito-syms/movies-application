@@ -1,24 +1,24 @@
 {
   "movies": [
     {
-      "title": "Casablanca",
-      "rating": "4",
+      "title": "Terminator",
+      "rating": "5",
       "id": 1
     },
     {
-      "title": "Star Wars: A New Hope",
-      "rating": "5",
-      "id": 2
-    },
-    {
-      "title": "movie",
-      "rating": "5",
+      "title": "Eternal Sunshine of The Spotless Mind",
+      "rating": "4",
       "id": 3
     },
     {
       "title": "Casablanca",
       "rating": "2",
       "id": 4
+    },
+    {
+      "title": "Freddy Got Fingered",
+      "rating": "1",
+      "id": 5
     }
   ]
 }

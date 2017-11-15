@@ -21,7 +21,6 @@
                 <h1>Movie List</h1>
             </div>
         </div>
-        <br>
         <!--<form class="row">-->
             <!--<div class="form-group col-md-6">-->
                 <!--<div class="input-group">-->
@@ -67,9 +66,9 @@
             </div>
             <div class="col-md-6">
                 <form method="post" id="editMovie">
-                    <div class="form-group">
-                        <label class="col-form-label" for="editTitle">Edit a movie</label>
-                        <input type="text" class="form-control" id="editTitle" placeholder="Movie Title">
+                    <div class="form-group movieUpdateInput">
+                        <label class="col-form-label" for="editTitle">Pick a Movie from the List Above</label>
+                        <input type="text" class="form-control" id="editTitle" placeholder="Click Edit Button">
                     </div>
                     <div class="form-group">
                         <label class="col-form-label">How would you rate this movie?</label>
@@ -88,8 +87,8 @@
                         <div class="radio">
                             <label><input type="radio" name="optradio" value="5">5 star</label>
                         </div>
-                        <button type="button" class="btn btn-danger" id="deleteMovie">Delete</button>
-                        <button type="submit" class="btn btn-default" id="editMovieBtn">Save Changes</button>
+                        <!--<button type="button" class="btn btn-danger" id="deleteMovie">Delete</button>-->
+                        <button type="submit" class="btn btn-default" id="editMovieBtn">Update Rating</button>
                     </div>
                 </form>
             </div>
